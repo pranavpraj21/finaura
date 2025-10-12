@@ -5,29 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FINAURA – Accounting with an Aura of Expertise</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --brand-color: #002259;
+    }
+
+    /* Floating WhatsApp button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      z-index: 1000;
+    }
+    .whatsapp-float:hover {
+      background-color: #20ba5a;
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-inter">
   <!-- Header -->
   <header class="bg-white shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-blue-700">FINAURA</h1>
-      <nav class="space-x-6 text-sm font-medium">
-        <a href="#services" class="hover:text-blue-600">Services</a>
-        <a href="#expertise" class="hover:text-blue-600">Expertise</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      <div class="flex items-center space-x-3">
+        <!-- Logo -->
+        <img src="logo.png" alt="Finaura Logo" class="h-10 w-auto">
+        <h1 class="text-2xl font-bold text-[color:var(--brand-color)] hidden sm:block">FINAURA</h1>
+      </div>
+      <nav class="space-x-6 text-sm font-medium flex items-center">
+        <a href="#services" class="hover:text-[color:var(--brand-color)]">Services</a>
+        <a href="#expertise" class="hover:text-[color:var(--brand-color)]">Expertise</a>
+        <a href="#contact" class="hover:text-[color:var(--brand-color)]">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="bg-blue-700 text-white py-20 text-center">
+  <section class="text-white py-20 text-center" style="background-color: var(--brand-color);">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-4xl font-bold mb-6">Accounting with an Aura of Expertise</h2>
       <p class="text-lg text-blue-100 mb-8">
         Simplify your accounting journey—whether you're just starting out or scaling up.  
         Bring clarity, control, and confidence to your finances with FINAURA.
       </p>
-      <a href="#contact" class="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold shadow hover:bg-blue-100">
+      <a href="#contact" class="bg-white text-black px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100">
         Get in Touch
       </a>
     </div>
@@ -35,7 +65,7 @@
 
   <!-- Challenges -->
   <section class="max-w-6xl mx-auto py-16 px-4">
-    <h3 class="text-2xl font-semibold text-center mb-8">Are you facing any of these challenges?</h3>
+    <h3 class="text-2xl font-semibold text-center mb-8" style="color: var(--brand-color);">Are you facing any of these challenges?</h3>
     <div class="grid md:grid-cols-2 gap-6">
       <ul class="space-y-4 text-gray-700">
         <li>✅ Starting a new business and need expert help to set up your books of accounts.</li>
@@ -56,7 +86,7 @@
   <!-- Services -->
   <section id="services" class="bg-white py-16">
     <div class="max-w-6xl mx-auto px-4 text-center">
-      <h3 class="text-2xl font-semibold mb-8 text-blue-700">What We Offer</h3>
+      <h3 class="text-2xl font-semibold mb-8" style="color: var(--brand-color);">What We Offer</h3>
       <div class="grid md:grid-cols-3 gap-8 text-left">
         <div class="p-6 bg-gray-50 rounded-xl shadow-sm">
           <h4 class="font-semibold text-lg mb-2">Accounting & Bookkeeping</h4>
@@ -87,9 +117,9 @@
   </section>
 
   <!-- Expertise -->
-  <section id="expertise" class="bg-blue-50 py-16">
+  <section id="expertise" class="py-16" style="background-color: #f2f6ff;">
     <div class="max-w-5xl mx-auto text-center px-4">
-      <h3 class="text-2xl font-semibold mb-6 text-blue-700">Our Expertise</h3>
+      <h3 class="text-2xl font-semibold mb-6" style="color: var(--brand-color);">Our Expertise</h3>
       <p class="text-gray-700 leading-relaxed max-w-3xl mx-auto">
         Our team includes professionals qualified in IFRS, UAE Tax & Regulation, and US CPA.  
         With over 10 years of global experience, we’ve helped businesses across industries build reliable, compliant, and future-ready financial systems.
@@ -98,18 +128,29 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="bg-blue-700 text-white py-16 text-center">
+  <section id="contact" class="text-white py-16 text-center" style="background-color: var(--brand-color);">
     <h3 class="text-2xl font-semibold mb-4">Let’s Talk</h3>
     <p class="mb-6">Write to <a href="mailto:info@finaura.ae" class="underline">info@finaura.ae</a><br/>
     or Call / WhatsApp: <a href="tel:+971556960030" class="underline">+971 55 696 0030</a></p>
-    <a href="mailto:info@finaura.ae" class="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold shadow hover:bg-blue-100">
+    <a href="mailto:info@finaura.ae" class="bg-white text-black px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100">
       Get in Touch
     </a>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 py-6 text-center text-sm">
+  <footer class="py-6 text-center text-sm text-white" style="background-color: var(--brand-color);">
     © 2025 FINAURA. All rights reserved.
   </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/971556960030?text=Hello%20Finaura!%20I%27d%20like%20to%20know%20more%20about%20your%20accounting%20services."
+     class="whatsapp-float"
+     target="_blank"
+     aria-label="Chat on WhatsApp">
+     <!-- Inline WhatsApp SVG -->
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="white">
+       <path d="M16.001 2.003c-7.732 0-14 6.268-14 14 0 2.476.647 4.876 1.877 6.984L2 30l7.22-1.842A13.92 13.92 0 0 0 16 30c7.732 0 14-6.268 14-14s-6.268-13.997-14-13.997zM16 27.807a11.77 11.77 0 0 1-5.982-1.633l-.43-.256-4.29 1.094 1.145-4.185-.281-.429a11.79 11.79 0 0 1-1.8-6.296c0-6.507 5.29-11.8 11.8-11.8 3.154 0 6.118 1.229 8.349 3.46a11.76 11.76 0 0 1 3.451 8.34c0 6.508-5.292 11.805-11.962 11.805zm6.596-8.91c-.36-.18-2.122-1.047-2.45-1.166-.327-.12-.565-.18-.804.18-.24.36-.923 1.166-1.132 1.405-.21.24-.42.27-.78.09-.36-.18-1.518-.56-2.893-1.78-1.07-.955-1.793-2.136-2.003-2.496-.21-.36-.022-.555.158-.734.163-.162.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.803-1.923-1.1-2.637-.29-.7-.59-.6-.804-.61h-.686c-.21 0-.54.09-.824.42s-1.08 1.055-1.08 2.58 1.106 2.994 1.26 3.204c.15.21 2.174 3.33 5.27 4.68.737.318 1.312.507 1.76.65.74.236 1.41.203 1.94.123.59-.088 1.823-.745 2.08-1.466.256-.72.256-1.34.18-1.466-.075-.123-.27-.195-.63-.375z"/>
+     </svg>
+  </a>
 </body>
 </html>
